@@ -9,7 +9,7 @@ public class Generator : MonoBehaviour
     [SerializeField] Transform genaratePoint;
     [SerializeField] ScoreSystem scoreSystem;
     [SerializeField] float distance;
-    int beforeBlock;
+    int beforeBlock = 10000;
     GameObject[] block;
 
     private void Awake()
