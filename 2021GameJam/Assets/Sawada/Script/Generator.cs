@@ -31,7 +31,7 @@ public class Generator : MonoBehaviour
         scoreSystem.AddScore();
         var gb = Random.Range(0, blocks.Length-1);
         int judge = Judge(gb);
-        Instantiate(blocks[judge], genaratePoint.position,Quaternion.identity);
+        Instantiate(blocks[Judge(judge)], genaratePoint.position,Quaternion.identity);
     }
     int Judge(int gb)
     {
