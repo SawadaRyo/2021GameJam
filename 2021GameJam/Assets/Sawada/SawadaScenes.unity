@@ -130,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396210684}
+  - component: {fileID: 396210685}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -151,6 +152,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396210685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396210683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75ff7eaeefeb5c49bc739236b79340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocks:
+  - {fileID: 0}
+  - {fileID: 4812274328271727649, guid: 1b773a9b25f6ff841a8cddc71a65fec0, type: 3}
+  - {fileID: 8695562995487039830, guid: 85f13ed29014af64cb1b642433ce25af, type: 3}
+  genaratePoint: {fileID: 570786535}
+  scoreSystem: {fileID: 0}
+  distance: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

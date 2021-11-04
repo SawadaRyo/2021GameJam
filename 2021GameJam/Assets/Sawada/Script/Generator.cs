@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour
     [SerializeField] float distance = 5f;
     int beforeBlock = 10000;
     GameObject[] block;
+    int gb;
 
     private void Awake()
     {
@@ -29,21 +30,22 @@ public class Generator : MonoBehaviour
     public void Generate()
     {
         scoreSystem.AddScore();
-        int gb = Random.Range(0, blocks.Length - 1);
+        beforeBlock = gb;
+        gb = Random.Range(0, blocks.Length - 1);
         Instantiate(blocks[Judge(gb)], genaratePoint.position,Quaternion.identity);
     }
     int Judge(int gb)
     {
         if(beforeBlock != gb)
         {
-            beforeBlock = gb;
             Debug.Log("生成");
             return gb;
         }
         else
         {
-            Debug.Log("再起");
-            return Judge(Random.Range(0, blocks.Length - 1));
+            int a = Random.Range(0, blocks.Length - 1);
+            Debug.Log("再起 " + a);
+            return Judge(a);
         }
     }
 }
