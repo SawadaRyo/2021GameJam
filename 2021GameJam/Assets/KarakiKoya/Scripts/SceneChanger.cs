@@ -8,6 +8,18 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneChanger : MonoBehaviour
 {
+    /// <summary>
+    /// 遷移先のシーン名
+    /// </summary>
+    [SerializeField]
+    string sceneName = "";
+
+    /// <summary>
+    /// 決定ボタン名
+    /// </summary>
+    [SerializeField]
+    string buttonNameSubmit = "Submit";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +29,16 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (buttonNameSubmit != "" && Input.GetButtonDown(buttonNameSubmit))
+        {
+            SceneChange();
+        }
     }
 
     /// <summary>
     /// シーン遷移する
     /// </summary>
-    /// <param name="sceneName">遷移先のシーン名</param>
-    public void SceneChange(string sceneName)
+    public void SceneChange()
     {
         SceneManager.LoadScene(sceneName);
     }
