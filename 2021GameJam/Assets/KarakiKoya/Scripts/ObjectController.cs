@@ -32,6 +32,13 @@ public class ObjectController : MonoBehaviour
     [SerializeField]
     string buttonNameDoFall = "Jump";
 
+    [Header("タグ名")]
+    /// <summary>
+    /// ブロック専用タグ名
+    /// </summary>
+    [SerializeField]
+    string tagNameBlock = "Block";
+
     [Space]
 
     /// <summary>
@@ -70,6 +77,7 @@ public class ObjectController : MonoBehaviour
         if (Input.GetButtonDown(buttonNameDoFall))
         {
             SetUseGravity(true);
+            gameObject.tag = tagNameBlock;
             enabled = false;
         }
     }
@@ -80,7 +88,7 @@ public class ObjectController : MonoBehaviour
     /// <param name="isUse">true:重力を働かせる</param>
     void SetUseGravity(bool isUse)
     {
-        rb.gravityScale = 0.0f;
         if (isUse) rb.gravityScale = defaultGravityScale;
+        else rb.gravityScale = 0.0f;
     }
 }
