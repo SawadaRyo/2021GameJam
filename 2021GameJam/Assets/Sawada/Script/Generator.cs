@@ -16,6 +16,7 @@ public class Generator : MonoBehaviour
     {
         scoreSystem = GetComponent<ScoreSystem>();
         block = GameObject.FindGameObjectsWithTag("Block");
+        Generate();
     }
     private void FixedUpdate()
     {
