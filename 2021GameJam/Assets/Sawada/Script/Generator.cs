@@ -17,12 +17,13 @@ public class Generator : MonoBehaviour
         block = GameObject.FindGameObjectsWithTag("Block");
         Generate();
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        var nearblock = block.OrderBy(x => Vector3.Distance(new Vector3(0,x.transform.position.y,0), new Vector3(0,this.transform.position.y,0))).LastOrDefault();
-        Transform bp = nearblock.GetComponent<Transform>();
-        Vector3 gbp = this.gameObject.transform.position;
-        gbp.y = bp.position.y + distance;
+        var nearblock = block.OrderBy(x => Vector3.Distance(new Vector3(0,x.transform.position.y,0), new Vector3(0,this.transform.position.y,0))).FirstOrDefault();
+        Transform blockPosition = nearblock.GetComponent<Transform>();
+        Vector3 generateBlockPosition = this.gameObject.transform.position;
+        blockPosition.position = new Vector3(0,generateBlockPosition.y + distance,0);
+        
     }
 
     public void Generate()
