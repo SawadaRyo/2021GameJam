@@ -60,3 +60,6 @@ crashlytics-build.properties
 
 2021GameJam/Library/
 2021GameJam/Temp/
+2021GameJam/.vsconfig
+2021GameJam/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+2021GameJam/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
