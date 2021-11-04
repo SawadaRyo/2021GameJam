@@ -51,10 +51,11 @@ public class ObjectController : MonoBehaviour
     [Space]
 
     /// <summary>
-    /// 本オブジェクトが落下された際に呼び出すブロック生成メソッド集
+    /// ブロック生成コンポーネント
     /// </summary>
     [SerializeField]
-    UnityEvent doBlockGenerate = default;
+    Generator gen = default;
+
 
     /// <summary>
     /// 初期重力値
@@ -67,6 +68,7 @@ public class ObjectController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         defaultGravityScale = rb.gravityScale;
+        gen = FindObjectOfType<Generator>();
         SetUseGravity(false);
     }
 
@@ -87,7 +89,7 @@ public class ObjectController : MonoBehaviour
         {
             SetUseGravity(true);
             gameObject.tag = tagNameBlock;
-            doBlockGenerate.Invoke();
+            gen.Generate();
             enabled = false;
         }
     }
