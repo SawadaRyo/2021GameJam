@@ -15,6 +15,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     Rigidbody2D rb = default;
 
+    [Header("操作ボタン名")]
     /// <summary>
     /// 移動用ボタン名
     /// </summary>
@@ -31,15 +32,13 @@ public class ObjectController : MonoBehaviour
     [SerializeField]
     string buttonNameDoFall = "Jump";
 
+    [Space]
+
     /// <summary>
     /// 移動速度係数
     /// </summary>
     [SerializeField]
     float moveSpeedRatio = 1.0f;
-    /// <summary>
-    /// 目指す回転角
-    /// </summary>
-    float rollTargetAngle = 0.0f;
 
     /// <summary>
     /// 初期重力値
