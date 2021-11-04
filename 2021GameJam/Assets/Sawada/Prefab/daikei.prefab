@@ -184,5 +184,5 @@ MonoBehaviour:
   buttonNameRoll: Horizontal
   buttonNameDoFall: Jump
   tagNameBlock: Block
-  moveSpeedRatio: 1
+  moveSpeedRatio: 6
   gen: {fileID: 0}

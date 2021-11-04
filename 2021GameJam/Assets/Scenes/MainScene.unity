@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382475307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.74, z: 0}
+  m_LocalPosition: {x: 0, y: 4.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -261,6 +261,8 @@ MonoBehaviour:
   blocks:
   - {fileID: 8399423522651276657, guid: 65efed705b74e31479ddee3c48ee05f0, type: 3}
   - {fileID: 1578448917962889484, guid: 67a0202558e4cdd44b4beb38414b0132, type: 3}
+  - {fileID: 7005101244083625384, guid: 578a55ece63ae41449049111d0484752, type: 3}
+  - {fileID: 1704598172028359585, guid: 6d360167b7fb46d47990a2ec31861185, type: 3}
   genaratePoint: {fileID: 382475308}
   scoreSystem: {fileID: 1733549084}
   distance: 5
@@ -570,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.9399996, z: -10}
+  m_LocalPosition: {x: 0, y: 4.1299996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1049,7 +1051,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822509108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.9399996, z: -10}
+  m_LocalPosition: {x: 0, y: 4.1299996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 285831627}
