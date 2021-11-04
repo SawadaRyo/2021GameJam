@@ -24,7 +24,6 @@ public class Generator : MonoBehaviour
         Transform blockPosition = nearblock.GetComponent<Transform>();
         Vector3 generateBlockPosition = blockPosition.gameObject.transform.position;
         gameObject.transform.position = new Vector3(0,generateBlockPosition.y + distance,0);
-        
     }
 
     public void Generate()
