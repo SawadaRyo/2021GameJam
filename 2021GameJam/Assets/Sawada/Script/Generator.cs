@@ -8,7 +8,7 @@ public class Generator : MonoBehaviour
     [SerializeField] GameObject[] blocks;
     [SerializeField] Transform genaratePoint;
     [SerializeField] ScoreSystem scoreSystem;
-    [SerializeField] float distance;
+    [SerializeField] float distance = 5f;
     int beforeBlock = 10000;
     GameObject[] block;
 
