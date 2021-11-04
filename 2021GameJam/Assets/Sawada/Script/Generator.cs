@@ -14,7 +14,6 @@ public class Generator : MonoBehaviour
 
     private void Awake()
     {
-        scoreSystem = GetComponent<ScoreSystem>();
         block = GameObject.FindGameObjectsWithTag("Block");
         Generate();
     }
