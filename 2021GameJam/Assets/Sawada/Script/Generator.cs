@@ -24,7 +24,7 @@ public class Generator : MonoBehaviour
         Vector3 gbp = this.gameObject.transform.position;
         gbp.y = bp.position.y + distance;
     }
-    void Generate()
+    public void Generate()
     {
         scoreSystem.AddScore();
         var gb = Random.Range(0, blocks.Length-1);
