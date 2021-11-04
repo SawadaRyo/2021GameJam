@@ -51,9 +51,14 @@ public class ObjectController : MonoBehaviour
     [Space]
 
     /// <summary>
-    /// ブロック生成コンポーネント
+    /// 次のオブジェクト生成のために遅延させる時間
     /// </summary>
     [SerializeField]
+    float delayOfNextGenerate = 1.0f;
+
+    /// <summary>
+    /// ブロック生成コンポーネント
+    /// </summary>
     Generator gen = default;
 
 
@@ -89,8 +94,8 @@ public class ObjectController : MonoBehaviour
         {
             SetUseGravity(true);
             gameObject.tag = tagNameBlock;
-            gen.Generate();
             enabled = false;
+            StartCoroutine(NextObjectGenerate());
         }
     }
 
@@ -102,5 +107,16 @@ public class ObjectController : MonoBehaviour
     {
         if (isUse) rb.gravityScale = defaultGravityScale;
         else rb.gravityScale = 0.0f;
+    }
+
+    /// <summary>
+    /// 次のオブジェクトを生成するコルーチン
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator NextObjectGenerate()
+    {
+        yield return new WaitForSeconds(delayOfNextGenerate);
+
+        gen.Generate();
     }
 }
