@@ -30,7 +30,7 @@ public class Generator : MonoBehaviour
     {
         scoreSystem.AddScore();
         beforeBlock = gb;
-        gb = Random.Range(0, blocks.Length - 1);
+        gb = Random.Range(0, blocks.Length);
         Instantiate(blocks[Judge(gb)], genaratePoint.position,Quaternion.identity);
     }
     int Judge(int gb)
@@ -42,7 +42,7 @@ public class Generator : MonoBehaviour
         }
         else
         {
-            int a = Random.Range(0, blocks.Length - 1);
+            int a = Random.Range(0, blocks.Length);
             Debug.Log("再起 " + a);
             return Judge(a);
         }
