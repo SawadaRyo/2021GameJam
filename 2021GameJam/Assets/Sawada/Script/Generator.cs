@@ -21,8 +21,8 @@ public class Generator : MonoBehaviour
     {
         var nearblock = block.OrderBy(x => Vector3.Distance(new Vector3(0,x.transform.position.y,0), new Vector3(0,this.transform.position.y,0))).FirstOrDefault();
         Transform blockPosition = nearblock.GetComponent<Transform>();
-        Vector3 generateBlockPosition = this.gameObject.transform.position;
-        blockPosition.position = new Vector3(0,generateBlockPosition.y + distance,0);
+        Vector3 generateBlockPosition = blockPosition.gameObject.transform.position;
+        gameObject.transform.position = new Vector3(0,generateBlockPosition.y + distance,0);
         
     }
 
