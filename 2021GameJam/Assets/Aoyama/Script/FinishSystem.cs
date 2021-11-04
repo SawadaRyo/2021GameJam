@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class FinishSystem : MonoBehaviour
 {
     [SerializeField] UnityEvent finishEvent;
