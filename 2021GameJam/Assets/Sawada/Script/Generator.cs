@@ -29,19 +29,20 @@ public class Generator : MonoBehaviour
     public void Generate()
     {
         scoreSystem.AddScore();
-        var gb = Random.Range(0, blocks.Length-1);
-        int judge = Judge(gb);
-        Instantiate(blocks[Judge(judge)], genaratePoint.position,Quaternion.identity);
+        int gb = Random.Range(0, blocks.Length - 1);
+        Instantiate(blocks[Judge(gb)], genaratePoint.position,Quaternion.identity);
     }
     int Judge(int gb)
     {
         if(beforeBlock != gb)
         {
             beforeBlock = gb;
+            Debug.Log("生成");
             return gb;
         }
         else
         {
+            Debug.Log("再起");
             return Judge(Random.Range(0, blocks.Length - 1));
         }
     }
