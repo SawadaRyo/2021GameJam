@@ -8,7 +8,7 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] Text scoreText;
 
     int score = 0;
-    void AddScore()
+    public void AddScore()
     {
         score++;
         if(scoreText)
