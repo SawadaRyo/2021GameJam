@@ -52,7 +52,7 @@ MonoBehaviour:
   buttonNameDoFall: Jump
   tagNameBlock: Block
   moveSpeedRatio: 6
-  gen: {fileID: 0}
+  delayOfNextGenerate: 2
 --- !u!1971053207 &1578448917962889483
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
