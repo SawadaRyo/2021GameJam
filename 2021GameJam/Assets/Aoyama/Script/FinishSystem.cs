@@ -7,21 +7,11 @@ using UnityEngine.Events;
 public class FinishSystem : MonoBehaviour
 {
     [SerializeField] UnityEvent finishEvent;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
+    [SerializeField] GameObject Generator;
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Block")
-        {
-            finishEvent.Invoke();
-        }
+        Debug.Log("Finish");
+        finishEvent.Invoke();
+        Destroy(Generator);
     }
 }
