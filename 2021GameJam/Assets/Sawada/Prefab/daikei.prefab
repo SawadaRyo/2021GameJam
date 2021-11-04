@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1786018400315731221}
   - component: {fileID: 8623707999027254079}
   - component: {fileID: 2932703649076734777}
+  - component: {fileID: -1310347461956387072}
   m_Layer: 0
   m_Name: daikei
   m_TagString: Untagged
@@ -186,3 +187,26 @@ MonoBehaviour:
   tagNameBlock: Block
   moveSpeedRatio: 6
   gen: {fileID: 0}
+--- !u!68 &-1310347461956387072
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005101244083625384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2, y: -2}
+  - {x: -1, y: 0.25}
+  - {x: 1, y: 0.25}
+  - {x: 2, y: -2}
+  - {x: -1.8056297, y: -2}
+  - {x: -1.9490371, y: -2}
+  - {x: -2, y: -2}
