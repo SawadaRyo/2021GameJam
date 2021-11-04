@@ -15,11 +15,11 @@ public class Generator : MonoBehaviour
 
     private void Awake()
     {
-        block = GameObject.FindGameObjectsWithTag("Block");
         Generate();
     }
     private void Update()
     {
+        block = GameObject.FindGameObjectsWithTag("Block");
         var nearblock = block.OrderBy(x => Vector3.Distance(new Vector3(0,x.transform.position.y,0), new Vector3(0,this.transform.position.y,0))).FirstOrDefault();
         Transform blockPosition = nearblock.GetComponent<Transform>();
         Vector3 generateBlockPosition = blockPosition.gameObject.transform.position;
