@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// オブジェクト操作スクリプト
@@ -47,6 +48,14 @@ public class ObjectController : MonoBehaviour
     [SerializeField]
     float moveSpeedRatio = 1.0f;
 
+    [Space]
+
+    /// <summary>
+    /// 本オブジェクトが落下された際に呼び出すブロック生成メソッド集
+    /// </summary>
+    [SerializeField]
+    UnityEvent doBlockGenerate = default;
+
     /// <summary>
     /// 初期重力値
     /// </summary>
@@ -73,11 +82,12 @@ public class ObjectController : MonoBehaviour
         {
             transform.Rotate(0f, 0f, 90f * Input.GetAxisRaw(buttonNameRoll));
         }
-        //落下
+        //落下&次のブロックを出現
         if (Input.GetButtonDown(buttonNameDoFall))
         {
             SetUseGravity(true);
             gameObject.tag = tagNameBlock;
+            doBlockGenerate.Invoke();
             enabled = false;
         }
     }
